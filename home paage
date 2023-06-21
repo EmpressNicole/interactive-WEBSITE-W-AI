@@ -1,0 +1,88 @@
+<div class="person">
+  <div class="body"></div>
+  <div class="legs"></div>
+  <div class="arms">
+    <div class="hand left">
+      <a href="page1.html"><div class="circle"></div></a>
+    </div>
+    <div class="hand right">
+      <a href="page2.html"><div class="circle"></div></a>
+    </div>
+  </div>
+</div>
+
+<style>
+.person {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 150px;
+  background-color: #333;
+  border-radius: 50% 50% 0 0;
+}
+
+.legs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 100px;
+  background-color: #333;
+}
+
+.arms {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+.hand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hand.left {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hand.right {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hand:hover .circle {
+  opacity: 1;
+}
+</style>
+
